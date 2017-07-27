@@ -6,6 +6,7 @@ public class enemymake : MonoBehaviour {
     void SpawnEnemy()
     {
         Instantiate(enemy);
+        Debug.Log(1);
     }
     public GameObject enemy;
 	// Use this for initialization
