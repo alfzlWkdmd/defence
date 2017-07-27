@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class enemymake : MonoBehaviour {
+
+    public GameObject Enemy;
     void SpawnEnemy()
     {
-        Instantiate(enemy);
-        Debug.Log(1);
+        Instantiate(Enemy, transform.position, Quaternion.identity);
     }
-    public GameObject enemy;
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("SpawnEnemy", 1, 1);
@@ -16,6 +16,6 @@ public class enemymake : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
-	}
+        
+    }
 }
