@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class enemymake : MonoBehaviour {
-    private int start;
+    void SpawnEnemy()
+    {
+        Instantiate(enemy);
+    }
+    public GameObject enemy;
 	// Use this for initialization
 	void Start () {
-		
+        InvokeRepeating("SpawnEnemy", 1, 1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.A))
-        {
-            start = 1;
-        }
+       
 	}
 }
