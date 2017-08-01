@@ -6,12 +6,13 @@ public class WayPoint : MonoBehaviour {
 
     public static Transform[] point;
 
-    void awake()
+    void Awake()
     {
         point = new Transform[transform.childCount];
         for (int i=0;i<point.Length;i++)
         {
             point[i] = transform.GetChild(i);
+            Debug.Log(point[i]);
         }
     }
 }
