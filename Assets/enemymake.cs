@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemymake : MonoBehaviour {
-    public int MyLife=10;
+public class EnemyMake : MonoBehaviour {
+    public float makeTime;
     public GameObject Enemy;
+    Player player;
+    
+            
     void SpawnEnemy()
     {
         Instantiate(Enemy, transform.position, Quaternion.identity);
     }
     void LiveDown()
     {
-        MyLife--;
+        player.MyLife--;
     }
   
 	void Start () {
-        InvokeRepeating("SpawnEnemy", 1, 1);
-        InvokeRepeating("LiveDown", 1, 1);
+        player = GetComponent<Player>();
+        InvokeRepeating("SpawnEnemy", makeTime, 1);
+        InvokeRepeating("LiveDown", makeTime, 1);
 	}
 	
 	void Update () {
         
-        if (MyLife==0)
+        if (player.MyLife==0)
         {
             Time.timeScale=0.0f;
         }
