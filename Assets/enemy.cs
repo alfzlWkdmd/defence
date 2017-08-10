@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Awake()
+    {
+        EnemyList.targetlist.Add(this.gameObject);
+    }
+    void update()
+    {
+        Debug.Log(EnemyList.targetlist.Count);
+    }
 }
