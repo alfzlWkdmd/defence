@@ -10,6 +10,6 @@ public class Enemy : MonoBehaviour {
     }
     void update()
     {
-        Debug.Log(EnemyList.targetlist.Count);
+     
     }
 }

@@ -38,6 +38,5 @@ public class TowerTarget : MonoBehaviour {
 	void Update () {
         //    if (target == null)
         //       return;
-        Debug.Log(targetlist.Count);
 	}
 }

@@ -9,6 +9,6 @@ public class Player : MonoBehaviour {
 	}
 	
 	void Update () {
-		
-	}
+        Debug.Log(EnemyList.targetlist.Count);
+    }
 }
