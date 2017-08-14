@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerTarget : MonoBehaviour {
-    public GameObject target;
-    List<GameObject> targetlist = new List<GameObject>();
+   // public GameObject target;
+  //  List<GameObject> targetlist = new List<GameObject>();
     //private Transform Target;
    // public float range = 15f;
 
