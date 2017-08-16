@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerBtton : MonoBehaviour {
-    Player player;
     void Start()
     {
-        player = GetComponent<Player>();
+      
     }
 	public void KillLastEnemy()
     {
@@ -16,6 +15,6 @@ public class TowerBtton : MonoBehaviour {
         }
         Destroy(EnemyList.targetlist[0].gameObject);
         EnemyList.targetlist.RemoveAt(0);
-        player.MyLife++;
+        Player.Life++;
     }
 }

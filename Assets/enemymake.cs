@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyMake : MonoBehaviour {
     public float makeTime;
     public GameObject Enemy;
-    Player player;
     
             
     void SpawnEnemy()
@@ -14,18 +13,17 @@ public class EnemyMake : MonoBehaviour {
     }
     void LiveDown()
     {
-        player.MyLife--;
+        Player.Life--;
     }
   
 	void Start () {
-        player = GetComponent<Player>();
         InvokeRepeating("SpawnEnemy", makeTime, 1);
         InvokeRepeating("LiveDown", makeTime, 1);
 	}
 	
 	void Update () {
         
-        if (player.MyLife==0)
+        if (Player.Life==0)
         {
             Time.timeScale=0.0f;
         }
